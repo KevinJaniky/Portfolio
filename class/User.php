@@ -7,7 +7,7 @@ class User
 
     public function __construct()
     {
-        require_once __DIR__ . '../env.php';
+        require_once 'env.php';
 
         try {
             $this->_bdd = new PDO('mysql:host=' . DATABASE . ';dbname=' . DBNAME . ';charset=utf8', USER, MDP);
@@ -41,4 +41,13 @@ class User
         $_SESSION['id'] = $id;
     }
 
+    public function connexion($id,$mdp){
+        $data = $this->getUser($id,$mdp);
+        if(!$data){
+            return false;
+        }
+        $this->createSession($id);
+        return true;
+
+    }
 }

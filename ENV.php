@@ -9,12 +9,10 @@
 define('DATABASE','localhost');
 define('DBNAME','kjaniky');
 define('USER','root');
-define('MDP','');
+define('MDP','root');
 
 /**
  *
  * PATH
  *
  */
-
-define('BASE','/KevinJANIKY/');

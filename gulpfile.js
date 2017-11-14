@@ -64,7 +64,7 @@ gulp.task('check-js', function () {
 gulp.task('browser-sync', function() {
     browserSync.init([path.css+'**/*.scss'],{
         notify: false,
-        proxy: "arval-master.dev",
+        proxy: "localhost/kjaniky",
         baseDir: "/"
     });
 });

@@ -84,8 +84,10 @@ $display = new Display('test', 'bouah');
                 for ($i = 0; $i < 8; $i++) {
                     $color = ['#96CA2D','#B5E655','#EDF7F2','#4BB5C1','#7FC6BC','#B9121B','#4C1B1B','#F6E497','#FCFAE1']
                     ?>
-                    <div class="item" style="background: <?= $color[$i] ?>">
+                    <div class="item" style="background: url(media/image/item1.jpg)">
                         <h3>Titre</h3>
+                        <div class="right_effect"></div>
+
                     </div>
                     <?php
                 }
