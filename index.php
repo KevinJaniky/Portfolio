@@ -12,7 +12,7 @@ $display = new Display('test', 'bouah');
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
@@ -77,17 +77,19 @@ $display = new Display('test', 'bouah');
                 </div>
             </div>
         </article>
-        <article>
+        <article class="blog_container">
             <h1>Blog</h1>
             <div class="blog">
                 <?php
-                for ($i = 0; $i < 8; $i++) {
-                    $color = ['#96CA2D','#B5E655','#EDF7F2','#4BB5C1','#7FC6BC','#B9121B','#4C1B1B','#F6E497','#FCFAE1']
+                $blog  = new Blog();
+                $data = $blog->getArticles(8);
+                $count = count($data);
+                for ($i = 0; $i < $count; $i++) {
                     ?>
-                    <div class="item" style="background: url(media/image/item1.jpg)">
-                        <h3>Titre</h3>
+                    <div class="item" style="background: url(<?= $data[$i]['image'] ?>)">
+                        <h3><?= $data[$i]['titre'] ?></h3>
+                        <a href="article/<?= $data[$i]['slug'] ?>"></a>
                         <div class="right_effect"></div>
-
                     </div>
                     <?php
                 }

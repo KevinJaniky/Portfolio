@@ -68,6 +68,9 @@
       }
     }
   }
+  .blog_container {
+    margin-top: 130px;
+  }
   .blog {
     display: flex;
     flex-wrap: wrap;
@@ -92,9 +95,17 @@
         font-size: 20px;
         z-index: 999;
       }
+      a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: transparent;
+      }
       .right_effect {
         width: 100%;
-        background: #ff6215;
+        background: $blue;
         height: 5px;
         position: absolute;
         bottom: 0;
@@ -107,5 +118,38 @@
         }
       }
     }
+  }
+}
+footer {
+  .top {
+    display: flex;
+    margin-top: 50px;
+    background: #3c3b3c;
+    padding: 20px;
+    >.widget {
+      flex:1;
+      ul{
+        list-style: none;
+        padding:0;
+        text-align: center;
+        li {
+          a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: $blue;
   }
 }

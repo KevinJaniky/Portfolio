@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule Home index.php
+RewriteRule ^article/([a-zA-Z0-9_-]+)$ article.php?slug=$1 [L]

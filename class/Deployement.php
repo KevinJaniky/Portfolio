@@ -37,6 +37,7 @@ class Deployement {
               `id` int(11) NOT NULL,
               `titre` varchar(255) NOT NULL,
               `slug` varchar(255) NOT NULL,
+              `image` varchar(255) NOT NULL,
               `content` text NOT NULL,
               `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
               `categorie` varchar(255) NOT NULL
